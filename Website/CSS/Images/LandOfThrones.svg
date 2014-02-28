@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg id="svgCanvas" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<script xlink:href="../../JS/SVGPan.js"/>
+	
+	<g id="viewport">
+	<polygon points="50,50 600,50 600,600 50,100"
+		style="fill: #ff0000; stroke: #000000; stroke-width: 1"/>
+	</g>
+		
+	
+</svg>

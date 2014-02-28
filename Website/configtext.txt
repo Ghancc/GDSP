@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <system.webServer>
+        <httpErrors>
+            <remove statusCode="404" subStatusCode="-1" />
+            <error statusCode="404" prefixLanguageFilePath="C:\Users\gavin\Desktop\Website"
+						path="404page.html" responseMode="File" />
+        </httpErrors>
+
+        <security>
+            <authorization>
+                <remove users="*" roles="" verbs="" />
+                <add accessType="Allow" users="*" />
+            </authorization>
+        </security>
+    </system.webServer>
+
+    <system.web>
+        <roleManager enabled="true" />
+    </system.web>
+
+</configuration>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <title>GDSP</title>
+  <meta charset="utf-8" />
+  <meta name="Author" content="Gavin Davis" />
+  <meta name="generator" content="text" />
+  <link rel="shortcut icon" href="../CSS/Images/red%20flag.jpg" />
+  <link rel="stylesheet" href="../CSS/ToG_Game.css" />
+</head>
+
+<body>
+
+
+
+<div id="wrapper">
+
+	<div id="board">
+	
+		<!-- Must have svg created from scratch here in order for SVGPan to work.
+			 Cannot use <img> tag -->
+		<svg id="svgCanvas" xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink" overflow="visible">
+		<script xlink:href="../JS/SVGPan.js"></script>
+			
+			<g id="viewport">
+			
+				<!-- WATER TERRITORIES -->
+				<polygon id="ws" class="wildling"
+				points="312,0 409,0 409,75 312,75"
+				style="fill: #666666; stroke: #000000; stroke-width: 2"/>
+			
+				<polygon id="The Bay of Ice" class="wsquare" onmouseover="name(this.id)"
+				points="-50,0 312,0 312,490 -50,490"
+				style="fill: #5599ff; stroke: #0000ff; stroke-width: 2"/>
+				
+				<polygon id="The Shivering Sea" class="wsquare" onmouseover="name(this.id)"
+				points="409,0 700,0 700,379 409,379"
+				style="fill: #5599ff; stroke: #0000ff; stroke-width: 2"/>
+				
+				<polygon id="The Narrow Sea" class="wsquare" onmouseover="name(this.id)"
+				points="315,379 700,379 700,695 315,695"
+				style="fill: #5599ff; stroke: #0000ff; stroke-width: 2"/>
+				
+				<polygon id="Shipbreaker Bay" class="wsquare" onmouseover="name(this.id)"
+				points="480,695 500,780 460,960 510,1000 600,1000
+						700,1000 700,695"
+				style="fill: #5599ff; stroke: #0000ff; stroke-width: 2"/>
+				
+				<polygon id="Blackwater Bay" class="wsquare" onmouseover="name(this.id)"
+				points="415,754 480,695 500,780 500,820 415,820"
+				style="fill: #5599ff; stroke: #0000ff; stroke-width: 2"/>
+				
+				<polygon id="Summer Sea" class="wsquare" onmouseover="name(this.id)"
+				points="270,1000 700,1000 700,1300 270,1300"
+				style="fill: #5599ff; stroke: #0000ff; stroke-width: 2"/>
+				
+				<polygon id="The Sea of Dorne" class="wsquare" onmouseover="name(this.id)"
+				points="340,1030 510,1030 530,1055 490,1080
+						475,1110 340,1110"
+				style="fill: #5599ff; stroke: #0000ff; stroke-width: 2"/>
+				
+				<polygon id="West Summer Sea" class="wsquare" onmouseover="name(this.id)"
+				points="-50,850 -50,1300 270,1300 270,850"
+				style="fill: #5599ff; stroke: #0000ff; stroke-width: 2"/>
+				
+				<polygon id="Redwyne Straights" class="wsquare" onmouseover="name(this.id)"
+				points="25,950 165,950 165,1220 45,1220 25,1200"
+				style="fill: #5599ff; stroke: #0000ff; stroke-width: 2"/>
+				
+				<polygon id="Ironman's Bay" class="wsquare" onmouseover="name(this.id)"
+				points="0,492 195,492 195,630 0,630"
+				style="fill: #5599ff; stroke: #0000ff; stroke-width: 2"/>
+				
+				<polygon id="Sunset Sea" class="wsquare" onmouseover="name(this.id)"
+				points="-50,490 55,490 55,512 0,512 0,820 100,820
+						100,850 -50,850"
+				style="fill: #5599ff; stroke: #0000ff; stroke-width: 2"/>
+				
+				<polygon id="The Golden Sound" class="wsquare" onmouseover="name(this.id)"
+				points="0,630 195,630 195,820 0,820"
+				style="fill: #5599ff; stroke: #0000ff; stroke-width: 2"/>
+				<!-- END WATCER TERRITORIES -->
+				
+				<!-- LAND TERRITORIES -->
+				<polygon id="Castle Black" class="square" onmouseover="name(this.id)"
+				points="314,72 284,106 372,173 426,144 409,72"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="crown" cx="320" cy="100" r="8" fill=#ffe901></circle>
+				
+				<polygon id="Winterfell" class="square" onmouseover="name(this.id)"
+				points="284,106 372,173 416,207 435,259 441,306 378,303 267,362
+						267,389 233,412 207,410 192,182 242,193 252,133"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="crown" cx="320" cy="200" r="8" fill=#ffe901></circle>
+				<circle class="barrel" cx="340" cy="220" r="8" fill=#b15817></circle>
+				<rect class="castle" x="310" y="270" width="20" height="11"
+					style="fill:#222222"></rect>
+				<rect class="castle" x="300" y="280" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="Karhold" class="square" onmouseover="name(this.id)"
+				points="372,173 426,144 509,144 509,219 479,219 435,259 416,207"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="crown" cx="400" cy="175" r="8" fill=#ffe901></circle>
+				
+				<polygon id="White Harbor" class="square" onmouseover="name(this.id)"
+				points="267,389 267,362 378,303 441,306 459,331 408,335 385,372
+						385,438 357,438 339,400 339,390"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<rect class="castle" x="350" y="330" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="Widow's Watch" class="square" onmouseover="name(this.id)"
+				points="459,331 408,335 385,372 385,438 425,438 432,379
+						494,379 494,350"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="barrel" cx="415" cy="348" r="8" fill=#b15817></circle>
+				
+				<polygon id="Stoney Shore" class="square" onmouseover="name(this.id)"
+				points="192,181 207,410 190,421 164,410 118,423 83,368 87,300
+						133,173"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="barrel" cx="150" cy="320" r="8" fill=#b15817></circle>
+				
+				<polygon id="Moat Cailin" class="square" onmouseover="name(this.id)"
+				points="207,410 233,412 267,389 339,390 339,400 315,471 284,475
+						256,538 233,483"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<rect class="castle" x="280" y="400" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="Greywater Watch" class="square" onmouseover="name(this.id)"
+				points="190,421 207,410 233,483 151,496 148,433"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="barrel" cx="198" cy="435" r="8" fill=#b15817></circle>
+				
+				<polygon id="Flint's Finger" class="square" onmouseover="name(this.id)"
+				points="148,433 151,496 53,515 53,433"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<rect class="castle" x="60" y="440" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="Seagard" class="square" onmouseover="name(this.id)"
+				points="151,496 233,483 256,538 295,600 245,596 193,579
+						193,520"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="crown" cx="200" cy="502" r="8" fill=#ffe901></circle>
+				<circle class="barrel" cx="220" cy="502" r="8" fill=#b15817></circle>
+				<rect class="castle" x="210" y="515" width="20" height="11"
+					style="fill:#222222"></rect>
+				<rect class="castle" x="200" y="525" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="The Twins" class="square" onmouseover="name(this.id)"
+				points="315,471 284,475 256,538 295,600 353,586 353,495
+						315,495"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="crown" cx="296" cy="500" r="8" fill=#ffe901></circle>
+				
+				<polygon id="The Fingers" class="square" onmouseover="name(this.id)"
+				points="353,586 353,495 429,471 425,493 485,466 452,496
+						481,485 462,507 491,490 476,514 518,493 479,525
+						453,529 435,549"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="barrel" cx="390" cy="500" r="8" fill=#b15817></circle>
+				
+				<polygon id="The Mountains of the Moon" class="square" onmouseover="name(this.id)"
+				points="295,600 326,651 382,685 412,679 378,658 364,631
+						364,610 491,597 526,574 515,525 435,549 353,568"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="barrel" cx="340" cy="625" r="8" fill=#b15817></circle>
+				
+				<polygon id="The Eyrie" class="square" onmouseover="name(this.id)"
+				points="491,597 364,610 364,631 378,658 412,679 444,679
+						478,641 513,641 540,597"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="crown" cx="500" cy="620" r="8" fill=#ffe901></circle>
+				<circle class="barrel" cx="480" cy="620" r="8" fill=#b15817></circle>
+				<rect class="castle" x="425" y="610" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="Pyke" class="square" onmouseover="name(this.id)"
+				points="40,539 160,539 160,606 40,606"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="crown" cx="55" cy="555" r="8" fill=#ffe901></circle>
+				<circle class="barrel" cx="75" cy="555" r="8" fill=#b15817></circle>
+				<rect class="castle" x="55" y="570" width="20" height="11"
+					style="fill:#222222"></rect>
+				<rect class="castle" x="45" y="580" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="Riverrun" class="square" onmouseover="name(this.id)"
+				points="245,596 295,600 326,651 269,658 242,673 182,699
+						170,650 193,631 193,579"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="crown" cx="208" cy="600" r="8" fill=#ffe901></circle>
+				<circle class="barrel" cx="208" cy="620" r="8" fill=#b15817></circle>
+				<rect class="castle" x="195" y="645" width="20" height="11"
+					style="fill:#222222"></rect>
+				<rect class="castle" x="185" y="655" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="Lannisport" class="square" onmouseover="name(this.id)"
+				points="170,650 182,699 165,781 65,781 55,737 90,650"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="barrel" cx="145" cy="670" r="8" fill=#b15817></circle>
+				<circle class="barrel" cx="115" cy="670" r="8" fill=#b15817></circle>
+				<rect class="castle" x="120" y="680" width="20" height="11"
+					style="fill:#222222"></rect>
+				<rect class="castle" x="110" y="690" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="Searoad Marches" class="square" onmouseover="name(this.id)"
+				points="65,781 165,781 165,877 85,877"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="barrel" cx="85" cy="797" r="8" fill=#b15817></circle>
+				
+				<polygon id="Stoney Sept" class="square" onmouseover="name(this.id)"
+				points="182,699 165,781 165,800 269,787 288,741 269,658
+						242,673"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="crown" cx="250" cy="700" r="8" fill=#ffe901></circle>
+				
+				<polygon id="Harrenhal" class="square" onmouseover="name(this.id)"
+				points="269,658 288,741 344,741 354,668 326,651"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="crown" cx="287" cy="670" r="8" fill=#ffe901></circle>
+				<rect class="castle" x="300" y="665" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="Crackclaw Point" class="square" onmouseover="name(this.id)"
+				points="354,668 344,741 344,756 415,754 480,705 492,655
+						443,695 382,685"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<rect class="castle" x="410" y="700" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="Dragonstone" class="square" onmouseover="name(this.id)"
+				points="540,705 658,705 658,800 540,800"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="crown" cx="558" cy="722" r="8" fill=#ffe901></circle>
+				<circle class="barrel" cx="578" cy="722" r="8" fill=#b15817></circle>
+				<rect class="castle" x="558" y="742" width="20" height="11"
+					style="fill:#222222"></rect>
+				<rect class="castle" x="548" y="752" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="King's Landing" class="square" onmouseover="name(this.id)"
+				points="344,756 330,790 330,877 371,900 415,877 415,754"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="crown" cx="357" cy="875" r="8" fill=#ffe901></circle>
+				<circle class="crown" cx="387" cy="875" r="8" fill=#ffe901></circle>
+				<rect class="castle" x="363" y="830" width="20" height="11"
+					style="fill:#222222"></rect>
+				<rect class="castle" x="353" y="840" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="The Blackwater" class="square" onmouseover="name(this.id)"
+				points="330,877 330,790 344,756 344,741 288,741
+						269,787 165,800 165,877"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="barrel" cx="185" cy="830" r="8" fill=#b15817></circle>
+				<circle class="barrel" cx="185" cy="850" r="8" fill=#b15817></circle>
+				
+				<polygon id="The Reach" class="square" onmouseover="name(this.id)"
+				points="371,900 330,877 145,877 180,970 310,970"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<rect class="castle" x="260" y="930" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="Highgarden" class="square" onmouseover="name(this.id)"
+				points="180,970 145,877 85,877 85,970 109,990 156,990"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="barrel" cx="107" cy="890" r="8" fill=#b15817></circle>
+				<circle class="barrel" cx="127" cy="890" r="8" fill=#b15817></circle>
+				<rect class="castle" x="108" y="902" width="20" height="11"
+					style="fill:#222222"></rect>
+				<rect class="castle" x="98" y="912" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="Oldtown" class="square" onmouseover="name(this.id)"
+				points="156,990 109,990 85,1010 85,1103 136,1103"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<rect class="castle" x="108" y="1000" width="20" height="11"
+					style="fill:#222222"></rect>
+				<rect class="castle" x="98" y="1010" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="Three Towers" class="square" onmouseover="name(this.id)"
+				points="136,1103 97,1103 136,1200 180,1200 220,1125
+						220,1050 200,1050"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="barrel" cx="135" cy="1140" r="8" fill=#b15817></circle>
+				
+				<polygon id="Dornish Marches" class="square" onmouseover="name(this.id)"
+				points="288,970 180,970 156,990 136,1103 200,1050 220,1050
+						220,1020 288,1020"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="crown" cx="172" cy="1042" r="8" fill=#ffe901></circle>
+				
+				<polygon id="Prince's Pass" class="square" onmouseover="name(this.id)"
+				points="288,1020 220,1020 220,1125 288,1125"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="crown" cx="244" cy="1110" r="8" fill=#ffe901></circle>
+				<circle class="barrel" cx="264" cy="1110" r="8" fill=#b15817></circle>
+				
+				<polygon id="Starfall" class="square" onmouseover="name(this.id)"
+				points="288,1125 220,1125 180,1200 180,1250 288,1250"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="barrel" cx="266" cy="1230" r="8" fill=#b15817></circle>
+				<rect class="castle" x="210" y="1220" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="The Boneway" class="square" onmouseover="name(this.id)"
+				points="288,970 288,1110 340,1110 340,970"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="crown" cx="315" cy="1095" r="8" fill=#ffe901></circle>
+				
+				<polygon id="Yronwood" class="square" onmouseover="name(this.id)"
+				points="345,1110 288,1110 288,1185 420,1185"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<rect class="castle" x="300" y="1160" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="Salt Shore" class="square" onmouseover="name(this.id)"
+				points="470,1185 288,1185 288,1250 470,1250"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="barrel" cx="380" cy="1220" r="8" fill=#b15817></circle>
+				
+				<polygon id="Sunspear" class="square" onmouseover="name(this.id)"
+				points="345,1110 420,1185 470,1185 470,1250 500,1250
+						530,1055 490,1080 475,1110"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="crown" cx="496" cy="1172" r="8" fill=#ffe901></circle>
+				<circle class="barrel" cx="476" cy="1172" r="8" fill=#b15817></circle>
+				<rect class="castle" x="476" y="1130" width="20" height="11"
+					style="fill:#222222"></rect>
+				<rect class="castle" x="466" y="1140" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="Kingswood" class="square" onmouseover="name(this.id)"
+				points=" 415,810 415,877 371,900 310,970 340,970 430,920 500,920
+						500,780"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="crown" cx="350" cy="947" r="8" fill=#ffe901></circle>
+				<circle class="barrel" cx="370" cy="932" r="8" fill=#b15817></circle>
+				
+				<polygon id="Storm's End" class="square" onmouseover="name(this.id)"
+				points="340,970 430,920 500,920 460,960 525,960 510,1030
+						340,1030"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<rect class="castle" x="456" y="1000" width="40" height="20"
+					style="fill:#222222"></rect>
+				
+				<polygon id="The Arbor" class="square" onmouseover="name(this.id)"
+				points="20,1120 55,1120 85,1200 75,1220 55,1250 20,1200"
+				style="fill: #cccccc; stroke: #000000; stroke-width: 1"/>
+				<circle class="crown" cx="55" cy="1227" r="8" fill=#ffe901></circle>
+				<!-- END LAND TERRITORIES -->
+				
+				<!-- RIVERS -->
+				<polygon
+				points="190,421 207,410 207,410 233,412 267,389 233,411
+						207,411"
+				style="fill: #0000ff; stroke: #0000ff; stroke-width:4"/>
+				
+				<polygon
+				points="252,527 256,538 295,600 326,651 382,685 327,651
+						257,538 257,527"
+				style="fill: #0000ff; stroke: #0000ff; stroke-width:4"/>
+				
+				<polygon
+				points="180,1200 220,1125 220,1100 219,1125"
+				style="fill: #0000ff; stroke: #0000ff; stroke-width:4"/>
+				<!-- END RIVERS -->
+			</g>
+		
+		</svg>
+
+	</div> <!-- END BOARD -->
+
+	<div id="options">
+		<table id="optionsTable">
+		<tbody>
+			<tr>
+				<td>
+				<input id="namebox" type="text" value="" size=25 readonly>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<input id="colors" type="checkbox" onclick="toggleColors()" checked> Colors (Not finished)
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<input id="castles" type="checkbox" onclick="toggleCastles()"  checked> Castles
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<input id="crowns" type="checkbox" onclick="toggleCrowns()"  checked> Crowns
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<input id="barrels" type="checkbox" onclick="toggleBarrels()"  checked> Barrels
+				</td>
+			</tr>
+		</tbody>
+		</table>
+	</div> <!-- END OPTIONS -->
+
+</div> <!-- END WRAPPER -->
+<script type="text/javascript" src="../JS/options.js"></script>
+
+</body>
+</html>

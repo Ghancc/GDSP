@@ -1,0 +1,67 @@
+/* nav.css - make some pretty navigation
+ *
+ * D Provine, 13 Feb 2013
+ */
+
+.tabblock {
+	
+}
+
+.tabsbar {
+     background: inherit;
+         margin: 0px 15px;
+    padding-top: 5px;
+}
+
+.tabsbar li {
+            list-style-type: none;
+                    display: inline;
+                     margin: 0px 3px;
+                    padding: 4px 8px 1px 8px;
+           background-color: #00e1e8;
+                      color: black;
+				font-family:"Helvetica", Times, sans-serif;
+				  font-size: 20px;
+                    z-index: -1;
+}
+
+.tabsbar li.thistab {
+               color: #0000ff;
+    background-color: #00e1e8;
+             z-index: 1;
+}
+
+.cardstack {
+    background-color: white;
+			position: relative;
+			  border: 4px solid #00e1e8;
+			   width: 95%;
+		 margin-left: 17px;
+			 z-index: 0;
+}
+
+.cardstack p {
+    margin: 1ex;
+}
+
+.content {
+    margin: 1ex;
+    min-height: 400px;
+    overflow: scroll;
+}
+
+.content select {
+         font-size: 100%;
+           width: 90%;
+          height: 19em;
+     margin-left: auto;
+    margin-right: auto;
+          border: 1px solid #8b0000;
+}
+
+.card div.banner {
+             padding: 5px 10px;
+    background-color: #00e1e8;
+               color: #000000;
+		 font-family:"Helvetica", Times, sans-serif;
+}
